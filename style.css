@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.banner {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+    /*
+    * Created with https://www.css-gradient.com
+    * Gradient link: https://www.css-gradient.com/?c1=99d6b7&c2=ffffdd&gt=r&gd=dcl
+    */
+    background-repeat: no-repeat;
+  
+    background: radial-gradient(at left center, #99D6B7, #FFFFDD);
+}
+
+.product {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  bottom:0px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  transition: 0.7s;
+  --left:0px;
+  display: flex;
+}
+
+.soda{
+  background: var(--url)  var(--left) 0px,
+  url(/1720185025861.png);
+  background-size: auto 100%;
+  width: 180px;
+  aspect-ratio:2/4;
+  background-blend-mode:multiply;
+  mask-image: url(/1720185025861.png);
+  mask-size: auto 100%;
+    transition: 0.8s;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.product:hover{
+  --left:-740px;
+  transition: 0.8s;
+    transform: translateX(-50%) translateY(-120px) rotate(3deg);
+}
+
+.product .soda:nth-child(2){
+  opacity: 0;
+}
+
+.product:hover .soda:nth-child(2){
+  opacity: 1;
+}
